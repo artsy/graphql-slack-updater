@@ -6,5 +6,8 @@ git pull origin master
 # nvm use 8.4
 # yarn install
 yarn dump-schema ../../schema/new
-mv ../../schema/new/schema.json ../../schema/new/metaphysics.json
+
+# We don't need the JSON file
+rm ../../schema/new/schema.json 
+# We want this though
 mv ../../schema/new/schema.graphql ../../schema/new/metaphysics.graphql
