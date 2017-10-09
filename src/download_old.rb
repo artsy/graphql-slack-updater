@@ -18,7 +18,7 @@ graphql_bucket = "artsy-graphql-schemas"
 #  10-11-2017.graphql
 # ...
 
-s3 = Aws::S3::Client.new
+s3 = Aws::S3::Client.new(region: "us-east-1")
 all_files = s3.list_objects(bucket: graphql_bucket).contents.map(&:key)
 folders = all_files.select { |f| f.end_with? "latest.graphql" }
                    .map { |f| f.split("/").first }
