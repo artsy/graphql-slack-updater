@@ -1,6 +1,7 @@
 language: node_js
 
 install:
+  gem install bundler
   bundle
   bundle exec ruby src/download_old.rb
 
