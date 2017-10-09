@@ -2,9 +2,11 @@
 
 git clone https://github.com/artsy/metaphysics.git temp/metaphysics
 cd temp/metaphysics
-git pull origin master
-# nvm use 8.4
-# yarn install
+
+nvm use 8.4
+
+# Install deps and generate the schema
+yarn install
 yarn dump-schema ../../schema/new
 
 # We don't need the JSON file

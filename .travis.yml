@@ -1,2 +1,11 @@
+language: node_js
+
+install:
+  bundle
+  bundle exec ruby src/download_old.rb
+
 script:
-  
+  servers/metaphysics/setup.sh
+  bundle exec ruby src/compare.rb
+
+  bundle exec ruby src/upload_new.rb
