@@ -1,6 +1,7 @@
 language: node_js
 
 install:
+  - rvm use 2.2.0
   - gem install bundler
   - bundle
   - bundle exec ruby src/download_old.rb
