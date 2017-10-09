@@ -1,4 +1,4 @@
-require 'slack-notifier'
+require "slack-notifier"
 require "graphql/schema_comparator"
 
 parsed_old = File.read("schema/old/metaphysics.graphql")
@@ -11,6 +11,6 @@ notifier = Slack::Notifier.new ENV["SLACK_WEBHOOK_URL"]
 if result.identical?
   notifier.post "No changes to Metaphysics"
 else
-  msgs = result.changes.map { |c| change.breaking ? "⚠️  #{change.message}" : "✅  #{change.message}" }
-  notifier.post "Metaphysics: \n\n#{msgs.join("\n")}""
+  msgs = result.changes.map { |_c| change.breaking ? "⚠️  #{change.message}" : "✅  #{change.message}" }
+  notifier.post "Metaphysics: \n\n#{msgs.join("\n")}"
 end
