@@ -1,4 +1,4 @@
-#!/usr/local/bin/fish
+#!/bin/sh
 
 git clone https://github.com/artsy/metaphysics.git temp/metaphysics
 cd temp/metaphysics
