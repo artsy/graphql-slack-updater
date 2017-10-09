@@ -3,7 +3,7 @@
 git clone https://github.com/artsy/metaphysics.git temp/metaphysics
 cd temp/metaphysics
 
-nvm use 8.4
+# nvm use 8.4
 
 # Install deps and generate the schema
 yarn install
