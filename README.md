@@ -1,3 +1,7 @@
+Deprecated in favour of a Peril [scheduled task](https://github.com/artsy/peril-settings/blob/2ef1a80a869f8195dc9f3757d7f5f5a7078d0960/tasks/compareSchemas.ts).
+
+---
+
 # GraphQL slack updater
 
 Provides a weekly slack update for changes to GraphQL servers in Artsy.
